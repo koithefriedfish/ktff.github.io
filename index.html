@@ -6,11 +6,13 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
+      display: flex;
     }
 
     header {
       text-align: center;
       margin-bottom: 20px;
+      flex: 1;
     }
 
     h1 {
@@ -21,6 +23,7 @@
 
     main {
       margin-bottom: 20px;
+      flex: 3;
     }
 
     p {
@@ -31,6 +34,31 @@
       border: 1px solid #ccc;
       padding: 10px;
       margin-bottom: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #f5f5f5;
+      padding: 10px;
+    }
+
+    .sidebar h3 {
+      font-size: 16px;
+      margin-top: 0;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 5px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
     }
 
     .references {
@@ -50,16 +78,35 @@
     <h1>My Wikipedia Page</h1>
   </header>
 
+  <div class="sidebar">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#section1">Section 1</a></li>
+      <li><a href="#section2">Section 2</a></li>
+      <li><a href="#section3">Section 3</a></li>
+    </ul>
+  </div>
+
   <main>
-    <div class="infobox">
-      <h2>Article Title</h2>
-      <p>This is the content of the article.</p>
+    <div id="section1" class="infobox">
+      <h2>Section 1</h2>
+      <p>This is the content of Section 1.</p>
       <p>It can have multiple paragraphs.</p>
+    </div>
+
+    <div id="section2" class="infobox">
+      <h2>Section 2</h2>
+      <p>This is the content of Section 2.</p>
+    </div>
+
+    <div id="section3" class="infobox">
+      <h2>Section 3</h2>
+      <p>This is the content of Section 3.</p>
     </div>
   </main>
 
   <footer>
-    <p>Design by Wikipedia pages. All rights reserved.</p>
+    <p>&copy; 2024 My Wikipedia Page. All rights reserved.</p>
   </footer>
 </body>
 </html>
